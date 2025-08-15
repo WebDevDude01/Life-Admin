@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Admin Profile</title>
+    <link rel="stylesheet" href="profileStyle.css">
+</head>
+<body>
+    <header>
+        <h1>Life Admin</h1>
+    </header>
+
+    <section id="section1">
+        <div id="profile-section">
+            <img id="profile-pic" src="female-avatar.webp">
+        </div>
+        
+        <div id="profile-info">
+            <h1>Player001</h1>
+            <div class="progress-section">
+                <p>Level 1</p>
+                <div class="progress-bar"  id="player-level-progress-bar">
+
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <p>Health</p>
+                <div class="progress-bar" id="player-health-progress-bar">
+
+                </div>
+            </div> 
+            
+            <div class="progress-section">
+                <p>Experience</p>
+                <div class="progress-bar" id="player-experience-progress-bar">
+
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <section id="section2">
+        <div class="add-a-habit" id="habits">
+            <div>
+                <h1>Habits</h1>
+                <button>Add a habit</button>
+            </div>
+
+            <div class="created-habit">
+                <div id="decrease">
+                    <button id="clear-streak1">-</button>
+                </div>
+                <p id="habit-title1">wake up at 6:00 am</p>
+                <p id="habit-streak1"></p>
+                <div id="increase">
+                    <button id="addHabitBtn1">+</button>
+                </div>
+            </div>
+
+
+
+            <div class="created-habit">
+                <div id="decrease">
+                    <button id="clear-streak2">-</button>
+                </div>
+                <p id="habit-title2">no smoking</p>
+                <p id="habit-streak2"></p>
+                <div id="increase">
+                    <button id="addHabitBtn2">+</button>
+                </div>
+            </div>
+            
+            <div class="created-habit">
+                <div id="decrease">
+                    <button id="clear-streak3">-</button>
+                </div>
+                <p id="habit-title3">code for one hour</p>
+                <p id="habit-streak3"></p>
+                <div id="increase">
+                    <button id="addHabitBtn3">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="add-a-habit" id="dailies">
+            <div>
+                <h1>Dailies</h1>
+                <button>Add a daily</button>
+            </div>
+            <div class="created-habit">
+                <div id="decrease">
+                    <p>-</p>
+                </div>
+                <p>your habit goes here </p>
+                <div id="increase">
+                    <p>+</p>
+                </div>
+            </div>
+        </div>
+        <div class="add-a-habit" id="to-dos">
+            <div>
+                <h1>To Do's</h1>
+                <button>Add a to do</button>
+            </div>
+
+                        <div class="created-habit">
+                <div id="decrease">
+                    <p>-</p>
+                </div>
+                <p>your habit goes here </p>
+                <div id="increase">
+                    <p>+</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="add-a-habit" id="rewards">
+            <div>
+                <h1>Rewards</h1>
+                <button></button>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="tracker.js"></script>
+</body>
+</html>

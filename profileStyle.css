@@ -1,0 +1,116 @@
+header {
+
+}
+
+#section1 {  
+    width: 100%;
+    height: 250px;
+    display: flex;
+
+    border: 2px solid black;
+    
+}
+
+#profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    /* border: 2px solid red; */
+
+}
+
+#profile-info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    /* border: 2px solid pink; */
+}
+
+#profile-pic {
+    width: 150px;
+    height: 150px;
+}
+
+#section2 {
+    width:100%;
+    height:500px;
+    /* border: 2px solid black; */
+}
+
+/* ====PROGRESS BAR==== */
+.progress-section, p {
+    margin-bottom: 0;
+}
+
+
+    .progress-bar{
+    border: 2px solid black;
+    height: 10px;
+    
+    }
+/* ==================== */
+
+/* ====Dailies section cards==== */
+    #habits {
+        /* width: 250px;
+        height: 250px;
+        border: 2px solid black; */
+    }
+
+    .add-a-habit{
+        width: 100%;
+        height: 250px;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+
+    .created-habit {
+        width: 100%;
+        display:flex;
+        border: 2px solid black;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        
+
+    }
+
+    #decrease {
+        width:14%;
+        display: flex;
+        justify-content: center;
+        
+        background-color: red;
+    }
+    #decrease p, #increase p {
+        color: white;
+        margin-top: 10%;
+
+    }
+
+    #increase{
+        width: 14%;
+        display:flex;
+        justify-content: center;
+        background-color: green;
+    }
+
+
+
+
+
+    #increase, #decrease {
+        border: 2px solid black;
+    
+    }
+
+
+
+/* ============================= */
