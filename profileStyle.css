@@ -2,6 +2,12 @@ header {
 
 }
 
+.create-a-habit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #section1 {  
     width: 100%;
     height: 250px;
@@ -26,7 +32,7 @@ header {
     width: 50%;
     height: 100%;
     justify-content: center;
-    /* border: 2px solid pink; */
+    border: 2px solid pink;
 }
 
 #profile-pic {
@@ -37,11 +43,11 @@ header {
 #section2 {
     width:100%;
     height:500px;
-    /* border: 2px solid black; */
+    border: 2px solid black;
 }
 
 /* ====PROGRESS BAR==== */
-.progress-section, p {
+.progress-section, p { 
     margin-bottom: 0;
 }
 
@@ -50,14 +56,14 @@ header {
     border: 2px solid black;
     height: 10px;
     
-    }
+    }  
 /* ==================== */
 
 /* ====Dailies section cards==== */
     #habits {
-        /* width: 250px;
+        width: 100%;
         height: 250px;
-        border: 2px solid black; */
+        border: 2px solid black;
     }
 
     .add-a-habit{
@@ -108,9 +114,5 @@ header {
 
     #increase, #decrease {
         border: 2px solid black;
-    
-    }
+    } 
 
-
-
-/* ============================= */
