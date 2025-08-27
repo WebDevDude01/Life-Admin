@@ -1,10 +1,43 @@
-// create a program that tracks the users habits and creates a streaks for everytime a habit is complete you will increase the number. If the users does not complete they habit, then the tracker will reset to zero.
+// Working with classes.
+class Habit {
+    constructor(habitName, habitFrequency) {
+        this.habitName = habitName;
+        this.habitFrequency = habitFrequency;
+        this.history = [];
+    }
+
+    displayHabit() {
+        console.log(`Hello ${this.habitName}, how are you doing today?`);
+        console.log(`And you plan on doing this for ${this.habitFrequency} days?`);
+        
+    }
+
+    markCompleted(date = new Date()) {
+        this.history.push(date.toISOString().split("T")[0]);
+        
+        
+    }
+
+    isCompletedToday() {
+        const today = new Date().toISOString().split("T")[0];
+        //return 
+        console.log(this.history.includes(today));
+    }
+}
+
+const habit1 = new Habit("Go to the gym.", 30)
+
+habit1.displayHabit();
+habit1.markCompleted();
+habit1.markCompleted();
+habit1.markCompleted();
+habit1.markCompleted();
+habit1.isCompletedToday();
+habit1.isCompletedToday();
+habit1.isCompletedToday();
+
+habit1.isCompletedToday();
 
 
-let counter = document.createElement("p");
-counter.id = "habit-counter";
 
 
-
-
-// ========================================
