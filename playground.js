@@ -1,6 +1,4 @@
 let userHabit = document.getElementById("user-habit");
-
-
 let submitButton = document.getElementById("submit-button");
 
 // let para = document.createElement("p");
@@ -10,22 +8,36 @@ let submitButton = document.getElementById("submit-button");
 
 class MyHabit {
     constructor(habitFrequency) {
-        this.userHabit = userHabit;
-        this.habitName = userHabit.value;
         this.habitFrequency = habitFrequency;
+        this.showDetails = this.showDetails.bind(this);
+        this.sayhello = this.sayhello.bind(this);
+        this.name = "Terell";
+
+        // submitButton.addEventListener("click", this.handleClick);
     }
 
+
     showDetails(){
-        console.log(this.habitName);
-        console.log(this.habitFrequency);
+        const inputValue = document.getElementById("user-habit").value;
+        console.log(`${this.habitFrequency} and  ${inputValue}`);
+    
+    }
+
+    sayhello() {
+        console.log(`hello ${this.name}`
+            
+        )
     }
 }
 
 
 let habit1 = new MyHabit(3);
+// let boundMethod = habit1.showDetails.bind(habit1);
 
 
-submitButton.addEventListener("click",habit1.showDetails)
+
+submitButton.addEventListener("click", habit1.showDetails);
+submitButton.addEventListener("click", habit1.sayhello);
 
 
 
