@@ -22,7 +22,7 @@ submitButton.addEventListener("click", function(){
         return
     };
 
-        let createdHabit = document.createElement("div");
+    let createdHabit = document.createElement("div");
     let decreaseHabit = document.createElement("div");
     let decreaseButton = document.createElement("button");
     let para = document.createElement("p");

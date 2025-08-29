@@ -1,43 +1,72 @@
-let userHabit = document.getElementById("user-habit");
-let submitButton = document.getElementById("submit-button");
-
-// let para = document.createElement("p");
-// let paraNode = document.createTextNode(userHabit.value);
-// para.append(paraNode);
-
+const userInput = document.getElementById("user-habit");
+const submitButton = document.getElementById("submit-button");
+let habitWall = document.getElementById("habits");
 
 class MyHabit {
-    constructor(habitFrequency) {
+    constructor(habitFrequency){
+        this.habitTitle = userInput.value;
         this.habitFrequency = habitFrequency;
-        this.showDetails = this.showDetails.bind(this);
-        this.sayhello = this.sayhello.bind(this);
-        this.name = "Terell";
-
-        // submitButton.addEventListener("click", this.handleClick);
+        this.history = [];
+        this.showHabit = this.showHabit.bind(this);
+        this.trackHabitCounterAndDate = this.trackHabitCounterAndDate.bind(this);
+        this.counter = 0;
     }
 
+    showHabit(){
+        if(userInput.value == ""){
+            window.alert("Must enter a habit.")
+            return
+        };
 
-    showDetails(){
-        const inputValue = document.getElementById("user-habit").value;
-        console.log(`${this.habitFrequency} and  ${inputValue}`);
+        let createdHabit = document.createElement("div");
+        let decreaseHabit = document.createElement("div");
+        let decreaseButton = document.createElement("button");
+        let para = document.createElement("p");
+        para.id = "habit-para";
+        let increaseHabit = document.createElement("div");
+        let increaseButton = document.createElement("button");
+        // ======================================================//
+        createdHabit.classList.add("created-habit");
+        decreaseHabit.id ="decrease";
+        decreaseButton.id = "clear-streak1";
+        increaseHabit.id = "increase";
+        increaseButton.id = "addHabitBtn1";
+        const decreaseTextNode = document.createTextNode("-");
+        let paraNode = document.createTextNode(userInput.value);
+        const increaseTextNode = document.createTextNode("+");
+        // ======================================================//
+        let counter = 1;
+        let counterMax = 30;
+        let counterPara = document.createElement("p");
+        counterPara.id = "habit-counter";
+        let counterTextNode = document.createTextNode(`${counter}/${counterMax}`);
+        counterPara.append(counterTextNode);
+
+        para.append(paraNode);
+
+        decreaseButton.append(decreaseTextNode);
+        increaseButton.append(increaseTextNode);
+        decreaseHabit.append(decreaseButton);
+        increaseHabit.append(increaseButton);
+        createdHabit.append(decreaseHabit);
+        createdHabit.append(para);
+        createdHabit.append(counterPara);
+        createdHabit.append(increaseHabit);
     
+        habitWall.append(createdHabit);
+
+        userInput.value = "";
     }
 
-    sayhello() {
-        console.log(`hello ${this.name}`
-            
-        )
+    trackHabitCounterAndDate(){
+
     }
+
 }
 
+const habit1 = new MyHabit(30);
 
-let habit1 = new MyHabit(3);
-// let boundMethod = habit1.showDetails.bind(habit1);
-
-
-
-submitButton.addEventListener("click", habit1.showDetails);
-submitButton.addEventListener("click", habit1.sayhello);
+submitButton.addEventListener("click",habit1.showHabit);
 
 
 
